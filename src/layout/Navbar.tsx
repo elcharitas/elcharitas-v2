@@ -4,6 +4,7 @@ import {
     Button,
     Container,
     Box,
+    Link,
     Typography,
     Toolbar,
     Tooltip,
@@ -77,24 +78,29 @@ export const Navbar: FC = () => (
                     <Stack spacing={2} direction="row" alignItems="center">
                         <Stack direction="row" spacing={1}>
                             <Tooltip title="">
-                                <Button
-                                    sx={{ textTransform: "capitalize" }}
-                                    variant="outlined"
-                                >
-                                    <Typography
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            justifyContent: "space-between",
-                                            fontSize: "0.95em",
-                                        }}
+                                <Link href="https://buymeacoffee.com/elcharitas">
+                                    <Button
+                                        sx={{ textTransform: "capitalize" }}
+                                        variant="outlined"
                                     >
-                                        <Coffee
-                                            sx={{ fontSize: "1.4em", mr: 1 }}
-                                        />
-                                        Buy Me a Coffee
-                                    </Typography>
-                                </Button>
+                                        <Typography
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "space-between",
+                                                fontSize: "0.95em",
+                                            }}
+                                        >
+                                            <Coffee
+                                                sx={{
+                                                    fontSize: "1.4em",
+                                                    mr: 1,
+                                                }}
+                                            />
+                                            Buy Me a Coffee
+                                        </Typography>
+                                    </Button>
+                                </Link>
                             </Tooltip>
                         </Stack>
                     </Stack>
