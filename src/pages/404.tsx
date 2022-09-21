@@ -22,7 +22,7 @@ const Page: FC<TError> = () => {
             </Typography>
             <Typography sx={{ my: 1, width: 300, textAlign: "center" }}>
                 I did all I could to prevent this from happening, but it seems
-                like you've found a missing page.
+                like you&apos;ve found a missing page.
             </Typography>
             <NextLink href="/" passHref>
                 <Button
