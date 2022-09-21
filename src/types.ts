@@ -10,4 +10,8 @@ export type TColor =
     | "success"
     | "warning";
 
+export enum EColor {
+    Primary = "#0471A6",
+}
+
 export type TCallback<T = void, D = unknown> = (arg?: D) => T;
