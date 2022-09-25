@@ -21,7 +21,7 @@ export const HeroContent: FC = () => (
                     />
                 </Stack>
             }
-            sx={{ maxWidth: 380 }}
+            sx={{ maxWidth: 400 }}
         >
             <Typography variant="h6" align="justify">
                 Jonathan Irhodia
