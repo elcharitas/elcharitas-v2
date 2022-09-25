@@ -15,6 +15,7 @@ import {
 import { Coffee } from "@mui/icons-material";
 import NextLink from "next/link";
 import { getGravatar } from "src/utils";
+import Image from "next/image";
 
 const NavbarRoot = styled(AppBar)(({ theme }) => ({
     backgroundColor: "transparent",
@@ -53,14 +54,17 @@ export const Navbar: FC = () => (
                                         fontWeight: "bold",
                                     }}
                                 >
-                                    <Avatar
-                                        component="p"
+                                    <Image
                                         src={getGravatar(
                                             process.env.NEXT_PUBLIC_EMAIL
                                         )}
-                                        sx={{ mr: 1, width: 16, height: 16 }}
+                                        width="16px"
+                                        height="16px"
+                                        style={{
+                                            borderRadius: "50%",
+                                        }}
                                     />{" "}
-                                    elcharitas
+                                    &nbsp; elcharitas
                                     <Typography
                                         component="span"
                                         color="primary"

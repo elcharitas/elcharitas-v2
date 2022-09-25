@@ -9,25 +9,27 @@ import {
 } from "@mui/material";
 
 interface IContent {
-    title?: ReactNode;
+    header?: ReactNode;
     children: ReactNode;
 }
 export const Content: FC<IContent & CardTypeMap["props"]> = ({
     children,
-    title,
+    header,
     ...props
 }) => (
     <Card {...props}>
-        {title && (
+        {typeof header === "string" ? (
             <>
                 <CardHeader
-                    title={title}
+                    title={header}
                     titleTypographyProps={{
                         sx: { fontSize: "1.2em", fontWeight: "bold" },
                     }}
                 />
                 <Divider />
             </>
+        ) : (
+            header
         )}
         <CardContent>
             <Box sx={{ position: "relative" }}>{children}</Box>
